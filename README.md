@@ -29,6 +29,7 @@ Skip this repo if you want a one-command harness installer. That is deliberately
 
 | Path | Purpose |
 |---|---|
+| `AGENTS.md` | Instructions for agents working on this repo itself. |
 | `install.md` | Audit-first, selective install guide. |
 | `security.md` | Public-safety and local-harness safety checklist. |
 | `prompts/` | Copy/paste prompts for auditing, installing, documenting, reviewing, and code archaeology. |
