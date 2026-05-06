@@ -56,6 +56,14 @@ Recommended first install:
 - Ask the agent to make one small change in a disposable branch.
 - Confirm it reports the exact command or checklist used before claiming completion.
 
+Optional local goal adapter:
+
+- Keep this repo as the source of truth.
+- Add a short global or project instruction that says long-running goals should use your chosen clone path, such as `<AGENT_HARNESS_RECIPES_DIR>/goal-recipes/README.md`.
+- If your agent supports local skills, create a thin `goal` skill that points back to these files instead of copying the full framework.
+- The adapter should trigger on `/goal`, "goal skill", long-running tasks, multi-step implementation, audit/docs/release-critic passes, and source-pipeline first slices.
+- Do not install external goal automation until you have dogfooded the markdown workflow and identified concrete friction.
+
 ## Verify It Worked
 
 Use the checklist that matches what you installed:
