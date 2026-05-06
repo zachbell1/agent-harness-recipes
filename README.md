@@ -48,6 +48,7 @@ Skip this repo if you want a one-command harness installer. That is deliberately
 |---|---|
 | `START_HERE.md` | Beginner first-run guide for model-first users. |
 | `AGENTS.md` | Instructions for agents working on this repo itself. |
+| `docs/transferability-roadmap.md` | Consolidation map for public assets, interview framing, beginner integration, and scanner ideas. |
 | `install.md` | Audit-first, selective install guide. |
 | `security.md` | Public-safety and local-harness safety checklist. |
 | `prompts/` | Copy/paste prompts for auditing, installing, documenting, reviewing, and code archaeology. |
