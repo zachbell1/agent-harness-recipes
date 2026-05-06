@@ -2,24 +2,69 @@
 
 These are bounded task briefs for agent tools that support goal mode, long-running tasks, or structured work sessions.
 
-Each recipe should define:
+Use this target schema when creating a new recipe from scratch or migrating an existing recipe:
 
-- **Destination:** the concrete artifact to produce
-- **Source context:** what to inspect
-- **Invariants:** what must not happen
-- **Done evidence:** what proves completion
-- **Phase boundary:** where to stop
+- **Destination:** what should exist when the goal is done
+- **Phase boundary:** where this goal stops, and what belongs to a later goal
+- **Allowed surface:** repos, files, APIs, commands, and data the goal may touch
+- **Forbidden surface:** anything explicitly out of scope
+- **Context loading:** what to inspect before edits
+- **Implementation contract:** smallest safe slice first, with no broad cleanup
+- **Board:** one active task, with queued scout/judge/worker/audit tasks only when useful
+- **Robustness probes:** edge cases that would make the work look done while incomplete
+- **Done evidence:** tests, commands, screenshots, reports, exact files, or live checks
+- **Receipt:** what changed, what was verified, and what remains blocked
+- **Completion audit:** map every requirement to concrete artifact evidence before marking complete
 
 Good goal recipes are not autonomy spells. They are containers for supervised work with a clear finish line.
+
+Existing recipes listed below may still use the lighter Destination / Source Context / Invariants / Done Evidence / Phase Boundary format until they are explicitly migrated.
 
 ## Recipes
 
 | Recipe | Use when |
 |---|---|
 | `public-repo-extractor.md` | Turning private patterns into a public-safe starter repo. |
+| `source-pipeline-first-slice.md` | Building the first safe slice of a source ingestion or normalization pipeline. |
 | `branch-release-critic.md` | Reviewing a branch or repo candidate before publishing. |
 | `docs-from-reality.md` | Rebuilding docs from actual repo behavior. |
+
+## Board Discipline
+
+For long or multi-step goals, keep a small board:
+
+```text
+Task ID:
+Type: scout | judge | worker | audit
+Status: queued | active | completed | blocked
+Objective:
+Allowed files:
+Verification:
+Stop if:
+Receipt:
+```
+
+Rules:
+
+- Exactly one task is active.
+- Worker tasks should be narrow enough to verify in the same run.
+- Blocked tasks need receipts, not vague explanations.
+- Final audit cannot pass while a worker task is still active or queued.
+
+## Robustness Probes
+
+Robustness probes are mandatory. Write them before implementation starts.
+
+A good probe names a way the goal could look complete while still being wrong. Examples:
+
+- a fixture path passes, but the live path ignores the same flag
+- a report field is populated with placeholder data
+- a duplicate row silently overwrites the wrong source
+- a dry-run still mutates downstream state
+- a green test does not cover the actual acceptance criterion
 
 ## Completion Discipline
 
 A goal is complete only when the done evidence exists. A listening server, a plausible diff, or a confident summary is not enough.
+
+Before marking a goal complete, restate every explicit requirement and map it to concrete artifact evidence. If any requirement is missing, incomplete, weakly verified, or uncovered, keep working or mark the exact blocker with a receipt.
