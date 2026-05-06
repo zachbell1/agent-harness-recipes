@@ -51,6 +51,18 @@ Rules:
 - Blocked tasks need receipts, not vague explanations.
 - Final audit cannot pass while a worker task is still active or queued.
 
+## Receipt Location
+
+For short goals, the final assistant response can be the receipt.
+
+For goals that produce durable decisions, code changes, public docs, or future install criteria, also save the receipt in one durable place:
+
+- a repo planning or session note, if the receipt belongs to a specific project
+- a research note, if the receipt evaluates a workflow or decision
+- a handoff note, if the next session must resume from it
+
+If a memory system is available, capture a compact pointer to the durable receipt. Do not duplicate long receipts across many places.
+
 ## Robustness Probes
 
 Robustness probes are mandatory. Write them before implementation starts.
