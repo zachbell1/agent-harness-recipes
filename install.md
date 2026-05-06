@@ -4,6 +4,8 @@ This repo does not install itself. That is the point.
 
 Use it as a small menu of prompts and rules. Ask your agent to audit your current setup first, then copy only the pieces you choose.
 
+If you are new to agent setup, start with `START_HERE.md` before using the full install guide.
+
 ## What This Improves In The First Hour
 
 - Agents stop making completion claims without fresh evidence.
@@ -52,9 +54,18 @@ Before changing anything, list every file you plan to edit. For each existing fi
 
 Recommended first install:
 
-- Add `rules/verification-lite.md` to your project instructions or `AGENTS.md`.
+- Add the starter bundle to your project instructions or `AGENTS.md`:
+  - `rules/scoped-execution-lite.md`
+  - `rules/verification-lite.md`
+  - `rules/handoff-lite.md`
 - Ask the agent to make one small change in a disposable branch.
 - Confirm it reports the exact command or checklist used before claiming completion.
+
+Default target:
+
+- If your project has no agent instruction file, create a repo-root `AGENTS.md`.
+- If your project already has an instruction file, append the smallest clear section instead of replacing it.
+- Keep the install project-local until you have proven the rules help.
 
 Optional local goal adapter:
 

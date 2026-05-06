@@ -13,6 +13,23 @@ This repo is for people who already use tools like Claude Code, Codex CLI, Curso
 
 It intentionally starts as plain markdown. There are no scripts, hooks, MCP configs, installers, generated skills, runtime state, or live automation in v1.
 
+## Start Here
+
+If you mostly interact with code by talking to a model, start with `START_HERE.md`.
+
+That guide gives you an exact first-run flow:
+
+1. Ask your agent for a read-only audit.
+2. Ask it to plan a tiny starter install.
+3. Approve one narrow project-local edit.
+4. Verify the new behavior with simple prompts.
+
+The recommended beginner starter bundle is:
+
+- `rules/scoped-execution-lite.md`
+- `rules/verification-lite.md`
+- `rules/handoff-lite.md`
+
 ## Who This Helps
 
 Use these recipes if:
@@ -29,6 +46,7 @@ Skip this repo if you want a one-command harness installer. That is deliberately
 
 | Path | Purpose |
 |---|---|
+| `START_HERE.md` | Beginner first-run guide for model-first users. |
 | `AGENTS.md` | Instructions for agents working on this repo itself. |
 | `install.md` | Audit-first, selective install guide. |
 | `security.md` | Public-safety and local-harness safety checklist. |
@@ -38,6 +56,15 @@ Skip this repo if you want a one-command harness installer. That is deliberately
 | `examples/` | Minimal examples for a project `AGENTS.md` and project brief. |
 
 ## Recommended Start
+
+For beginners:
+
+1. Read `START_HERE.md`.
+2. Run the read-only audit prompt.
+3. Install only the starter bundle if the plan looks safe.
+4. Verify behavior with the checks in `START_HERE.md`.
+
+For more experienced users:
 
 1. Read `security.md`.
 2. Copy `prompts/audit-current-agent-setup.md` into your agent and run it against your current setup.
