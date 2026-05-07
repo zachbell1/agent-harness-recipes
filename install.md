@@ -45,7 +45,7 @@ Before changing anything, list every file you plan to edit. For each existing fi
 
 ## Selective Install Path
 
-1. Run `prompts/setup-scanner.md`.
+1. Run `prompts/setup-scanner.md` and give the agent the recipe files it should compare against.
 2. Read the scanner report and confirm the "Do Not Touch" list.
 3. Pick the matching adapter in `adapters/`, if one exists.
 4. Run `prompts/install-with-gap-analysis.md` against the scanner report, selected adapter, and selected recipe files.
@@ -62,6 +62,8 @@ Recommended first install:
   - `rules/handoff-lite.md`
 - Ask the agent to make one small change in a disposable branch.
 - Confirm it reports the exact command or checklist used before claiming completion.
+
+If your agent cannot read this repo directly, paste the scanner prompt plus the contents of the starter rule files into the chat before asking for the scan. If you want tool-specific guidance, also provide the matching adapter file from `adapters/`.
 
 Default target:
 

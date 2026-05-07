@@ -87,7 +87,7 @@ For beginners:
 For more experienced users:
 
 1. Read `security.md`.
-2. Copy `prompts/setup-scanner.md` into your agent and run it against your current setup.
+2. Copy `prompts/setup-scanner.md` into your agent and provide the recipe files it should compare against.
 3. Read the audit before copying anything from this repo.
 4. Pick one adapter in `adapters/` if your tool has a matching surface.
 5. Verify it changed behavior with the checks in `install.md`.
