@@ -28,7 +28,7 @@ You asked for a read-only scan.
 
 ## Expected Report
 
-```text
+````text
 ## 1. Harness Surface
 
 Detected tools:
@@ -167,7 +167,7 @@ To remove:
 - Does this project use another agent tool outside this repo that has a separate rule surface?
 
 No edits made.
-```
+````
 
 ## What Good Looks Like
 
