@@ -45,12 +45,14 @@ Before changing anything, list every file you plan to edit. For each existing fi
 
 ## Selective Install Path
 
-1. Run `prompts/audit-current-agent-setup.md`.
-2. Run `prompts/install-with-gap-analysis.md`.
-3. Choose one item from the plan.
-4. Copy that item manually or ask the agent to make the narrow edit.
-5. Review the diff.
-6. Run the verification check for that item.
+1. Run `prompts/setup-scanner.md`.
+2. Read the scanner report and confirm the "Do Not Touch" list.
+3. Pick the matching adapter in `adapters/`, if one exists.
+4. Run `prompts/install-with-gap-analysis.md` against the scanner report, selected adapter, and selected recipe files.
+5. Choose one item from the plan.
+6. Copy that item manually or ask the agent to make the narrow edit.
+7. Review the diff.
+8. Run the verification check for that item.
 
 Recommended first install:
 
@@ -74,6 +76,21 @@ Optional local goal adapter:
 - If your agent supports local skills, create a thin `goal` skill that points back to these files instead of copying the full framework.
 - The adapter should trigger on `/goal`, "goal skill", long-running tasks, multi-step implementation, audit/docs/release-critic passes, and source-pipeline first slices.
 - Do not install external goal automation until you have dogfooded the markdown workflow and identified concrete friction.
+
+## Adapter Path
+
+Use adapters when the scanner identifies a specific harness surface.
+
+Current adapter docs:
+
+- `adapters/agents-md.md`
+- `adapters/codex.md`
+- `adapters/claude-code.md`
+- `adapters/cursor.md`
+
+Adapters are manual translation guides. They do not install anything by themselves.
+
+Do not use multiple adapters at once for a first install. Pick the surface the project already uses, or use `AGENTS.md` when the user wants a portable project-local target.
 
 ## Verify It Worked
 
@@ -104,9 +121,9 @@ Use this if you want an agent to help install selectively:
 ```text
 I have a markdown-only agent-harness recipe repo. Before installing anything:
 
-1. Inspect my current agent/project setup.
-2. Inspect the recipe files I point you at.
-3. Classify each recipe as NEW, UPGRADE, DUPLICATE, CONFLICT, or SKIP.
+1. Run a read-only setup scan using the scanner prompt I provide.
+2. Inspect the recipe and adapter files I point you at.
+3. Classify each recipe or adapter as NEW, UPGRADE, DUPLICATE, CONFLICT, or SKIP.
 4. Recommend a prioritized plan.
 5. Ask me which exact items to install.
 
