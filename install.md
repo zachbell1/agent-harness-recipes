@@ -46,13 +46,14 @@ Before changing anything, list every file you plan to edit. For each existing fi
 ## Selective Install Path
 
 1. Run `prompts/setup-scanner.md` and give the agent the recipe files it should compare against.
-2. Read the scanner report and confirm the "Do Not Touch" list.
-3. Pick the matching adapter in `adapters/`, if one exists.
-4. Run `prompts/install-with-gap-analysis.md` against the scanner report, selected adapter, and selected recipe files.
-5. Choose one item from the plan.
-6. Copy that item manually or ask the agent to make the narrow edit.
-7. Review the diff.
-8. Run the verification check for that item.
+2. Compare the scanner output against `examples/setup-scanner-report.md`.
+3. Read the scanner report and confirm the "Do Not Touch" list.
+4. Pick the matching adapter in `adapters/`, if one exists.
+5. Run `prompts/install-with-gap-analysis.md` against the scanner report, selected adapter, and selected recipe files.
+6. Choose one item from the plan.
+7. Copy that item manually or ask the agent to make the narrow edit.
+8. Review the diff.
+9. Run the verification check for that item.
 
 Recommended first install:
 

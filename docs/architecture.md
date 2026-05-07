@@ -118,6 +118,7 @@ No future updater should silently overwrite user instructions.
 | `adapters/` | Harness adapters | Manual translation docs for specific agent surfaces. |
 | `goal-recipes/` | Canonical patterns | Structured long-running work briefs. |
 | `examples/` | Bootstrap | Worked examples and starter files. |
+| `examples/setup-scanner-report.md` | Bootstrap | Example output for the prompt-first scanner. |
 | `security.md` | Safety | Public-safety and extraction checklist. |
 
 ## Version Boundaries

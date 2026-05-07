@@ -73,7 +73,7 @@ Skip this repo if you want a blind one-command harness installer. That is delibe
 | `adapters/` | Manual adapter docs for translating patterns into specific harness surfaces. |
 | `goal-recipes/` | Bounded `/goal`-style task briefs with done evidence and phase boundaries. |
 | `rules/` | Small agent instruction fragments you can adapt into `AGENTS.md`, project rules, or memory. |
-| `examples/` | Minimal examples for a project `AGENTS.md` and project brief. |
+| `examples/` | Worked setup scanner, starter install, project brief, and goal examples. |
 
 ## Recommended Start
 
@@ -88,7 +88,7 @@ For more experienced users:
 
 1. Read `security.md`.
 2. Copy `prompts/setup-scanner.md` into your agent and provide the recipe files it should compare against.
-3. Read the audit before copying anything from this repo.
+3. Compare the result to `examples/setup-scanner-report.md`.
 4. Pick one adapter in `adapters/` if your tool has a matching surface.
 5. Verify it changed behavior with the checks in `install.md`.
 

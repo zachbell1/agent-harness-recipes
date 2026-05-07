@@ -28,6 +28,7 @@ This repo is the first public slice of that operating layer. The long-term shape
 | `docs/architecture.md` | Layer model for patterns, scanner, adapters, bootstrap, and updates. | Shows what is v1 now and what should wait. |
 | `START_HERE.md` | A first-run path for model-first users. | Gives exact prompts for audit, install plan, approval, and behavior checks. |
 | `examples/beginner-first-install.md` | A worked install example. | Shows what useful model output should look like. |
+| `examples/setup-scanner-report.md` | A worked scanner report example. | Shows what useful scanner output should include before any install plan. |
 | `rules/scoped-execution-lite.md` | Scope boundary discipline. | Reduces unrelated edits and config drift. |
 | `rules/verification-lite.md` | Evidence-backed completion claims. | Stops "looks good" from replacing tests, checks, or explicit blockers. |
 | `rules/handoff-lite.md` | End-of-session continuity. | Makes future sessions easier to resume. |
@@ -231,7 +232,7 @@ No updater should silently rewrite a user's harness.
 ## Future Build Slices
 
 1. Test the beginner path with one trusted friend.
-2. Test `prompts/setup-scanner.md` against one disposable project.
+2. Test `prompts/setup-scanner.md` with one trusted friend.
 3. Add examples for GitHub Copilot, Gemini, Aider, Cline, and OpenHands after the adapter format is proven.
 4. Add an interview/demo walkthrough with before/after transcripts.
 5. Add a friend-audit checklist for reviewers trying this repo cold.
