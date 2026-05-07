@@ -9,6 +9,7 @@ Use this target schema when creating a new recipe from scratch or migrating an e
 - **Allowed surface:** repos, files, APIs, commands, and data the goal may touch
 - **Forbidden surface:** anything explicitly out of scope
 - **Context loading:** what to inspect before edits
+- **Context Check Gate:** phase-boundary check before starting the next implementation slice
 - **Implementation contract:** smallest safe slice first, with no broad cleanup
 - **Board:** one active task, with queued scout/judge/worker/audit tasks only when useful
 - **Robustness probes:** edge cases that would make the work look done while incomplete
@@ -19,6 +20,21 @@ Use this target schema when creating a new recipe from scratch or migrating an e
 Good goal recipes are not autonomy spells. They are containers for supervised work with a clear finish line.
 
 Existing recipes listed below may still use the lighter Destination / Source Context / Invariants / Done Evidence / Phase Boundary format until they are explicitly migrated.
+
+## Context Check Gate
+
+Before starting any new implementation slice or multi-step phase, run a short Context Check Gate.
+
+The gate should include:
+
+- a rough remaining-context estimate
+- repo, runtime, and open-work state from the current evidence
+- the next proposed slice or phase boundary
+- one recommendation: `continue`, `checkpoint only`, `$outro now`, or `start fresh next turn`
+
+The gate is mandatory at phase transitions, after material commits, database mutations, runtime mutations, before cross-repo work, deploy work, review work, long-running work, and before starting a conceptually distinct next slice.
+
+Do not fire the gate noisily for tiny answers, one-command checks, or simple clarifications.
 
 ## Recipes
 
