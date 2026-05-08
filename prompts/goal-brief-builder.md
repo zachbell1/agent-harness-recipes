@@ -22,6 +22,7 @@ Build the brief with these sections:
 
 5. Context loading
    - What you will inspect before edits.
+   - If using the shared workflow kernel or Agent Briefing Index for context, pass the current user request or concrete goal as `--topic` so advisor ranking responds to the active topic, not just the project slug.
 
 6. Context Check Gate
    - Before starting a new implementation slice or multi-step phase, estimate remaining context roughly.
@@ -34,6 +35,7 @@ Build the brief with these sections:
    - Smallest safe slice first.
    - No broad cleanup.
    - No adjacent feature work unless explicitly required.
+   - Advisor routing may rank candidates automatically, but advisor execution remains manual unless explicitly scoped later.
 
 8. Board
    - Create a small task board with exactly one active task.
