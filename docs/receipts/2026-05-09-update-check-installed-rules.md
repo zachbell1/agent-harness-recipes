@@ -5,7 +5,8 @@ Date: 2026-05-09
 ## What Changed
 
 - Added `prompts/update-check-installed-rules.md`.
-- Added an explicit backup requirement before approved update edits.
+- Added a mandatory timestamped backup requirement before editing existing
+  target files during approved updates.
 - Updated `docs/architecture.md` so the update path points to the new
   prompt-first checker.
 - Updated `docs/transferability-roadmap.md` so the prompt is listed as a public
