@@ -24,6 +24,7 @@ Current examples:
 - `prompts/branch-release-critic.md`
 - `prompts/codebase-archaeologist.md`
 - `prompts/docs-from-reality.md`
+- `prompts/update-check-installed-rules.md`
 
 Rules for this layer:
 
@@ -103,6 +104,14 @@ The safe shape is a comparison workflow:
 5. preserve local customizations unless the user chooses otherwise
 
 No future updater should silently overwrite user instructions.
+
+The current update path is prompt-first:
+
+- `prompts/update-check-installed-rules.md`
+
+It compares installed local rules against current recipe files, classifies
+differences, preserves local customizations by default, and asks for approval
+before edits.
 
 ## Current Repo Map
 

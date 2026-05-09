@@ -69,7 +69,7 @@ Skip this repo if you want a blind one-command harness installer. That is delibe
 | `docs/transferability-roadmap.md` | Near-term roadmap for public assets, beginner integration, scanner ideas, and future slices. |
 | `install.md` | Audit-first, selective install guide. |
 | `security.md` | Public-safety and local-harness safety checklist. |
-| `prompts/` | Copy/paste prompts for auditing, installing, documenting, reviewing, and code archaeology. |
+| `prompts/` | Copy/paste prompts for auditing, installing, updating, documenting, reviewing, and code archaeology. |
 | `adapters/` | Manual adapter docs for translating patterns into specific harness surfaces. |
 | `goal-recipes/` | Bounded `/goal`-style task briefs with done evidence and phase boundaries. |
 | `rules/` | Small agent instruction fragments you can adapt into `AGENTS.md`, project rules, or memory. |
@@ -91,6 +91,10 @@ For more experienced users:
 3. Compare the result to `examples/setup-scanner-report.md`.
 4. Pick one adapter in `adapters/` if your tool has a matching surface.
 5. Verify it changed behavior with the checks in `install.md`.
+
+For updating an existing install, use `prompts/update-check-installed-rules.md`
+as a read-only comparison first. It should recommend updates without
+overwriting local customizations.
 
 ## Design Principles
 

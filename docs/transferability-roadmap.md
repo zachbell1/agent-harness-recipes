@@ -35,6 +35,7 @@ This repo is the first public slice of that operating layer. The long-term shape
 | `prompts/audit-current-agent-setup.md` | Read-only setup discovery. | Helps users understand their current agent rules before installing anything. |
 | `prompts/setup-scanner.md` | Structured scanner report. | Produces a safer harness bootstrap report before install planning. |
 | `prompts/install-with-gap-analysis.md` | Selective install planning. | Classifies recipes before edits and asks for approval. |
+| `prompts/update-check-installed-rules.md` | Prompt-first update checking. | Compares installed rules to newer recipes without overwriting local customizations. |
 | `prompts/codebase-archaeologist.md` | Read-only repo orientation. | Helps an agent map unfamiliar code before editing. |
 | `prompts/docs-from-reality.md` | Documentation grounded in observable behavior. | Avoids aspirational or stale README claims. |
 | `prompts/branch-release-critic.md` | Release-readiness review. | Checks claim accuracy, security, file tree, and install path before sharing. |
@@ -236,7 +237,7 @@ No updater should silently rewrite a user's harness.
 3. Add examples for GitHub Copilot, Gemini, Aider, Cline, and OpenHands after the adapter format is proven.
 4. Add an interview/demo walkthrough with before/after transcripts.
 5. Add a friend-audit checklist for reviewers trying this repo cold.
-6. Add a prompt-first update checker for installed rules.
+6. Dogfood `prompts/update-check-installed-rules.md` against one installed starter bundle.
 7. Decide whether the scanner remains prompt-only or becomes an optional read-only script.
 8. If a script is added later, keep it read-only by default and require explicit file allowlists.
 
