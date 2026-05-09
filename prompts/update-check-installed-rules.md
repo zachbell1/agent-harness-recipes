@@ -103,6 +103,7 @@ Rules:
 - End with: "No edits made."
 
 After I approve specific updates:
+- Create the agreed backups before editing existing files.
 - Edit only the approved target files.
 - Preserve unrelated local rules.
 - Show the diff summary.
